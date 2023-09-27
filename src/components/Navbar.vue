@@ -6,11 +6,11 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            message: 'Uppstart av navbar',
-
+    export default {
+        data() {
+            return {
+                message: 'Navbar placeholder'
+            }
         }
     }
 }
