@@ -1,6 +1,7 @@
 <template>
     <div>
         <h3>{{ message }}</h3>
+
     </div>
 </template>
 
@@ -12,8 +13,11 @@
             }
         }
     }
+}
 </script>
 
 <style scoped>
-
+h3 {
+    color: crimson
+}
 </style>
