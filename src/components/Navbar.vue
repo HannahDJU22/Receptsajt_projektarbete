@@ -9,14 +9,18 @@
     export default {
         data() {
             return {
-                message: 'Navbar placeholder'
+                message: 'Kategori 1\nKategori 2...'
             }
         }
     }
-}
 </script>
 
 <style scoped>
+:root {
+    grid-column: 1/3;
+    grid-row: 2;
+}
+
 h3 {
     color: crimson
 }

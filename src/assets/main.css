@@ -1,6 +1,10 @@
 @import './base.css';
 
 #app {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  column-gap: 15px;
+
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
