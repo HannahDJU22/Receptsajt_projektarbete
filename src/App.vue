@@ -1,9 +1,11 @@
 <script>
 import Navbar from './components/Navbar.vue';
+import Recipe_desc from './components/Recipe_desc.vue';
 
 export default{
 components:{
   Navbar,
+  Recipe_desc,
 },
 data(){
   return{
@@ -19,21 +21,12 @@ data(){
   </header>
   <Navbar/>
   <main>
-    <ul>
-      <li>
-        Recept 1
-      </li>
-      <li>
-        Recept 2
-      </li>
-      <li>
-        Recept 3...
-      </li>
-    </ul>
+    <Recipe_desc/>
   </main>
   <footer>
     footer placeholder
   </footer>
+  
 </template>
 
 <style scoped>
