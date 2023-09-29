@@ -1,12 +1,18 @@
 <template>
     <div>
         <h2>{{ desc }}</h2>
-        <ul><li v-for="recipe in recipeData" :key="recipe.id">{{recipe.title  }}</li></ul>
+        <ul><li v-for="recipe in recipeData" :key="recipe.id">{{recipe.title  }} <CookingTime :recipe="recipe"/></li>
+        </ul>
     </div>
 </template>
 
 <script>
+import CookingTime from './CookingTime.vue';
+
 export default {
+    components:{
+        CookingTime,
+    },
     data() {
         return {
             desc: 'Receptnamn:',
