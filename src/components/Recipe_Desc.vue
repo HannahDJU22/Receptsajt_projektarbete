@@ -1,21 +1,23 @@
 <template>
     <div>
         <h2>{{ desc }}</h2>
-        <ul><li v-for="recipe in recipeData" :key="recipe.id">{{recipe.title  }} <CookingTime :recipe="recipe"/></li>
+        <ul><li v-for="recipe in recipeData" :key="recipe.id">{{recipe.title  }} <CookingTime :recipe="recipe"/><Description_Short :recipe="recipe"/></li>
         </ul>
     </div>
 </template>
 
 <script>
 import CookingTime from './CookingTime.vue';
+import Description_Short from './Description_Short.vue';
 
 export default {
     components:{
-        CookingTime,
-    },
+    CookingTime,
+    Description_Short
+},
     data() {
         return {
-            desc: 'Receptnamn:',
+            desc: 'Recept:',
             recipeData: [],
         }
     },
