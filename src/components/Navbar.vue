@@ -2,7 +2,11 @@
     <div>
         <h3>{{ message }}</h3>
         <ul>
-            <li v-for="item in apiData" :key="item.id"><Category :name="item.name" :count="item.count"/></li>
+            <li v-for="item in apiData" :key="item.id">
+                <RouterLink to="/category">
+                    <Category :name="item.name" :count="item.count"/>
+                </RouterLink>
+            </li>
         </ul>
     </div>
 </template>
