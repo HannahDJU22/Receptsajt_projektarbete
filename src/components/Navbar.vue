@@ -2,7 +2,7 @@
     <div>
         <h3>{{ message }}</h3>
         <ul>
-            <li v-for="item in apiData" :key="item.id"><Category :name="item.name"/></li>
+            <li v-for="item in apiData" :key="item.id"><Category :name="item.name" :count="item.count"/></li>
         </ul>
     </div>
 </template>
