@@ -30,7 +30,7 @@ data(){
   <footer>
     footer placeholder
   </footer>
-  
+  <RouterView />
 </template>
 
 <style scoped>
