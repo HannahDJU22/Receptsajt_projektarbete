@@ -1,5 +1,6 @@
 <script>
 import Navbar from './components/Navbar.vue';
+import { RouterLink, RouterView } from 'vue-router'
 import Recipe_desc from './components/Recipe_desc.vue';
 
 export default{
@@ -19,7 +20,9 @@ data(){
   <header>
     <h1>{{ heading }}</h1>
   </header>
-  <Navbar/>
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+  </nav>
   <main>
     <Recipe_desc/>
   </main>
