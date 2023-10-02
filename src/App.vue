@@ -22,6 +22,7 @@ data(){
   </header>
   <nav>
     <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/views/RecipeView">Recipe</RouterLink>
   </nav>
   <main>
     <Recipe_desc/>
