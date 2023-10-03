@@ -10,7 +10,7 @@ components:{
 },
 data(){
   return{
-    heading: 'Lord of the Sprint',
+    heading: 'Lord of the Sprint - Veganska recept by David',
   }
 }
 }
@@ -20,7 +20,9 @@ data(){
   <header>
     <h1>{{ heading }}</h1>
   </header>
-  <Navbar/>
+  <nav>
+    <Navbar/>
+  </nav>
   <main>
     <Recipe_desc/>
   </main>

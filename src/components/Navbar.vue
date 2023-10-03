@@ -3,13 +3,17 @@
         <h3>{{ message }}</h3>
         <ul>
             <li v-for="item in apiData" :key="item.id">
-                <Category :name="item.name" />
+                
+                <RouterLink to="/category">
+                    <Category :name="item.name" :count="item.count" />
+                </RouterLink>
             </li>
             <li>
                 <RouterLink to="/">Home</RouterLink>
             </li>
             <li>
                 <RouterLink to="/views/RecipeView">Recipe</RouterLink>
+                          
             </li>
         </ul>
     </div>
@@ -21,7 +25,7 @@ import Category from './Category.vue';
 export default {
     data() {
         return {
-            message: 'Uppstart av navbar',
+            message: 'Receptkategorier',
             apiData: [],
         };
     },
