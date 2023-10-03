@@ -21,8 +21,6 @@ data(){
     <h1>{{ heading }}</h1>
   </header>
   <nav>
-    <RouterLink to="/">Home</RouterLink>  |  
-    <RouterLink to="/views/RecipeView">Recipe</RouterLink>
     <Navbar/>
   </nav>
   <main>
