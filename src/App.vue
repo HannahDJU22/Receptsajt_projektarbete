@@ -10,7 +10,7 @@ components:{
 },
 data(){
   return{
-    heading: 'Lord of the Sprint',
+    heading: 'Lord of the Sprint - Veganska recept by David',
   }
 }
 }
@@ -21,7 +21,7 @@ data(){
     <h1>{{ heading }}</h1>
   </header>
   <nav>
-    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/">Home</RouterLink>  |  
     <RouterLink to="/views/RecipeView">Recipe</RouterLink>
     <Navbar/>
   </nav>

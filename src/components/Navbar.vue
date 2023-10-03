@@ -17,7 +17,7 @@ import Category from './Category.vue';
 export default {
     data() {
         return {
-            message: 'Uppstart av navbar',
+            message: 'Receptkategorier',
             apiData: [],
         };
     },
