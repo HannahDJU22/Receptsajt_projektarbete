@@ -2,13 +2,21 @@
     <div>
         <h3>{{ message }}</h3>
         <ul>
-            <li v-for="item in apiData" :key="item.id"><Category :name="item.name"/></li>
+            <li v-for="item in apiData" :key="item.id">
+                <Category :name="item.name" />
+            </li>
+            <li>
+                <RouterLink to="/">Home</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/views/RecipeView">Recipe</RouterLink>
+            </li>
         </ul>
     </div>
 </template>
 
 <script>
-import Category from './Category.vue';
+import Category from './Category.vue';  
 
 export default {
     data() {
@@ -35,5 +43,4 @@ export default {
 
 h3 {
     color: crimson
-}
-</style>
+}</style>

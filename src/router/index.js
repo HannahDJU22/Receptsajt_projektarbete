@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory  } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-    
-  history: createWebHistory(import.meta.env.BASE_URL), //https://router.vuejs.org/guide/essentials/history-mode.html#HTML5-Mode
+
+    history: createWebHistory(import.meta.env.BASE_URL), //https://router.vuejs.org/guide/essentials/history-mode.html#HTML5-Mode
     routes: [
         {
             path: '/',
