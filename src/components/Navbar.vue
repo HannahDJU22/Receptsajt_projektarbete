@@ -12,8 +12,9 @@
                 <RouterLink to="/">Home</RouterLink>
             </li>
             <li>
-                <RouterLink to="/views/RecipeView">Recipe</RouterLink>
-                          
+
+                <RouterLink to="/recipe/1">Recipe</RouterLink>
+
             </li>
         </ul>
     </div>

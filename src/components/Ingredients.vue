@@ -13,6 +13,10 @@
 export default {
     props: {
         ingredients: Array,
+    },
+    data(){
+        return{
+        }
     }
 }
 </script>
