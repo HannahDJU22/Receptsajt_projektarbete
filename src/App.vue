@@ -1,14 +1,14 @@
 <script>
 import Navbar from './components/Navbar.vue';
 import { RouterLink, RouterView } from 'vue-router';
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import MainHeader from './components/MainHeader.vue';
+import MainFooter from './components/MainFooter.vue';
 
 export default{
 components:{
   Navbar,
-  Header,
-  Footer,
+  MainHeader,
+  MainFooter,
   
 },
 data(){
@@ -21,7 +21,7 @@ data(){
 
 <template>
   <header>
-    <h1><Header></Header></h1>
+    <h1><MainHeader></MainHeader></h1>
   </header>
   <nav>
     <Navbar/>
@@ -30,7 +30,7 @@ data(){
     <RouterView />
   </main>
   <footer>
-    <Footer></Footer>
+    <MainFooter></MainFooter>
   </footer>
   
 </template>

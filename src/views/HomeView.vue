@@ -6,12 +6,12 @@
 <SearchRecipe></SearchRecipe>
     </p>
     <main>
-        <Recipe_desc />
+        <RecipeDescription />
     </main>
 </template>
 
 <script>
-import Recipe_desc from '../components/Recipe_desc.vue';
+import RecipeDescription from '../components/RecipeDescription.vue';
 import WelcomeText from '../components/WelcomeText.vue';
 import SearchRecipe from '../components/SearchRecipe.vue';
 
@@ -19,7 +19,7 @@ export default {
     components: {
         WelcomeText,
         SearchRecipe,
-        Recipe_desc,
+        RecipeDescription,
     },
     data() {
         return {

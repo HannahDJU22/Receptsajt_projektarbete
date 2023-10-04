@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>{{ desc }}</h2>
-        <ul><li v-for="recipe in recipeData" :key="recipe.id">{{recipe.title  }} <CookingTime :recipe="recipe"/><Description_Short :recipe="recipe"/>
+        <ul><li v-for="recipe in recipeData" :key="recipe.id">{{recipe.title  }} <CookingTime :recipe="recipe"/><DescriptionShort :recipe="recipe"/>
         <IngredientCount :ingredientCount="recipe.ingredients.length"/>
         </li>
         </ul>
@@ -10,13 +10,13 @@
 
 <script>
 import CookingTime from './CookingTime.vue';
-import Description_Short from './Description_Short.vue';
+import DescriptionShort from './DescriptionShort.vue';
 import IngredientCount from './IngredientCount.vue';
 
 export default {
     components:{
     CookingTime,
-    Description_Short,
+    DescriptionShort,
     IngredientCount,
 },
     data() {

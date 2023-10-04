@@ -1,18 +1,18 @@
 <template>
     <div>
-<Recipe_desc/>
+<RecipeDescription/>
 <Ingredients/>
 <Instructions/>
     </div>
 </template>
 
 <script>
-import Recipe_desc from './Recipe_desc.vue';
+import RecipeDescription from './RecipeDescription.vue';
 import Ingredients from './Ingredients.vue';
 import Instructions from './Instructions.vue';
 
 export default {
-    components: { Recipe_desc, Ingredients, Instructions }
+    components: { RecipeDescription, Ingredients, Instructions }
 }
 </script>
 
