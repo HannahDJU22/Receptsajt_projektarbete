@@ -8,7 +8,7 @@
     export default {
         data(){
             return{
-                welcome: 'Lord of the Sprint - Veganska recept by David'
+                welcome: 'Veganska recept by David'
             }
         }
     }
