@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :id=name class="category">
         {{ name }} ({{ count }})
     </div>
 </template>

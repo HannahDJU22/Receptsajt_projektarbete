@@ -12,6 +12,10 @@
   font-weight: normal;
 }
 
+.bolded {
+  font-weight: bold;
+}
+
 a,
 .green {
   text-decoration: none;
