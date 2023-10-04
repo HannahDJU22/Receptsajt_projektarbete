@@ -2,11 +2,13 @@
 import Navbar from './components/Navbar.vue';
 import { RouterLink, RouterView } from 'vue-router';
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default{
 components:{
   Navbar,
   Header,
+  Footer,
   
 },
 data(){
@@ -28,7 +30,7 @@ data(){
     <RouterView />
   </main>
   <footer>
-    footer placeholder
+    <Footer></Footer>
   </footer>
   
 </template>
