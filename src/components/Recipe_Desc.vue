@@ -21,7 +21,7 @@ export default {
 },
     data() {
         return {
-            desc: 'Recept:',
+            desc: 'RECEPT:',
             recipeData: [],
         }
     },

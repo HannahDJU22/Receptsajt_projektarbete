@@ -1,18 +1,17 @@
 <script>
 import Navbar from './components/Navbar.vue';
-import { RouterLink, RouterView } from 'vue-router'
-import Recipe_desc from './components/Recipe_desc.vue';
+import { RouterLink, RouterView } from 'vue-router';
 import Header from './components/Header.vue';
 
 export default{
 components:{
   Navbar,
   Header,
-  Recipe_desc,
+  
 },
 data(){
   return{
-    //heading: 'Lord of the Sprint - Veganska recept by David',
+    
   }
 }
 }
@@ -26,12 +25,12 @@ data(){
     <Navbar/>
   </nav>
   <main>
-    <Recipe_desc/>
+    <RouterView />
   </main>
   <footer>
     footer placeholder
   </footer>
-  <RouterView />
+  
 </template>
 
 <style scoped>
