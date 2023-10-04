@@ -1,3 +1,29 @@
 <template>
-    <h1>hello category</h1>
+    <div>
+        category id: {{ selectedCategory }}
+    </div>
 </template>
+
+<script>
+    export default {
+        created() {
+            this.$watch (
+                () => this.$route.params,
+                (toParams) => {
+                    this.selectedCategory = toParams.categoryId
+                }
+            )
+        },
+        data() {
+            return {
+                selectedCategory: this.$route.params.categoryId
+            }
+        }
+    }
+    
+    
+</script>
+
+<style scoped>
+
+</style>
