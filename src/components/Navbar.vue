@@ -7,7 +7,7 @@
         <ul>
             <li v-for="item in apiData" :key="item.id">
                 
-                <RouterLink to="/category">
+                <RouterLink :to="`/category/${item.name}`">
                     <Category :name="item.name" :count="item.count" />
                 </RouterLink>
             </li>
@@ -43,4 +43,5 @@ export default {
 
 h3 {
     color: crimson
-}</style>
+}
+</style>
