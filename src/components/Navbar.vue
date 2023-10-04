@@ -7,7 +7,7 @@
         <ul>
             <li v-for="item in apiData" :key="item.id">
                 
-                <RouterLink :to="`/category/${item.name}`">
+                <RouterLink :to="`/category/${item.name}`" @click="makeBold(item.name)">
                     <Category :name="item.name" :count="item.count" />
                 </RouterLink>
             </li>
@@ -23,6 +23,7 @@ export default {
         return {
             message: 'Receptkategorier',
             apiData: [],
+            categories: document.getElementsByClassName("category")
         };
     },
     created() {
@@ -31,6 +32,15 @@ export default {
             .then(data => { this.apiData = data; })
             .catch(error => { console.error('An error occured: ', error); });
     },
+    methods: {
+            makeBold(selectedCategory) {
+                for (const element of this.categories) {
+                        element.classList.remove("bolded")
+                    }
+                let currentCategory = document.getElementById(selectedCategory)
+                currentCategory.classList.add("bolded")
+            }
+        },
     components: { Category }
 }
 </script>
