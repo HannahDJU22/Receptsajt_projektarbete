@@ -1,4 +1,7 @@
 <template>
+    <header>
+        <RouterLink to="/">Home</RouterLink>  |   <RouterLink to="/recipe/1">Recipe</RouterLink>
+    </header>
     <div>
         <h3>{{ message }}</h3>
         <ul>
@@ -7,14 +10,6 @@
                 <RouterLink to="/category">
                     <Category :name="item.name" :count="item.count" />
                 </RouterLink>
-            </li>
-            <li>
-                <RouterLink to="/">Home</RouterLink>
-            </li>
-            <li>
-
-                <RouterLink to="/recipe/1">Recipe</RouterLink>
-
             </li>
         </ul>
     </div>
