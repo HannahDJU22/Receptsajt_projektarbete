@@ -3,7 +3,8 @@ import Ingredients from '../components/Ingredients.vue'
 import Recipe from '../components/Recipe.vue'
 export default {
     components: {
-        Ingredients
+        Ingredients,
+        Recipe
     },
     data() {
         return {
@@ -11,22 +12,16 @@ export default {
                 { id: 1, name: 'Lentil spinach soup' },
                 { id: 2, name: 'Kung pao tofu' },
                 { id: 3, name: 'Tarragon zucchini casserole' }
-            ]
-        }
-    },
-    methods: {
-        getRecipeNameById(recipeId) {
-
-            const recipe = this.recipes.find((r) => r.id === parseInt(recipeId));
-
-            return recipe ? recipe.name : 'Recipe not found';
+            ],
+            selectedRecipe: this.$route.params.recipeId,
+            listOfIngredients: [{ name: 'carrot', amount: '2', unit: 'pieces' }]
         }
     }
 }
 </script>
 <template>
     <p>
-    <recipe/>
-    <p>{{ getRecipeNameById($route.params.recipeId) }}</p>
+        id:{{ selectedRecipe }}
     </p>
+    <Ingredients :ingredients="listOfIngredients"></Ingredients>
 </template>
