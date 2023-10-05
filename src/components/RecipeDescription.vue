@@ -3,6 +3,7 @@
         <h2>{{ desc }}</h2>
         <ul><li v-for="recipe in recipeData" :key="recipe.id">{{recipe.title  }} <CookingTime :recipe="recipe"/><DescriptionShort :recipe="recipe"/>
         <IngredientCount :ingredientCount="recipe.ingredients.length"/>
+        <UserRating />
         </li>
         </ul>
     </div>
@@ -12,12 +13,14 @@
 import CookingTime from './CookingTime.vue';
 import DescriptionShort from './DescriptionShort.vue';
 import IngredientCount from './IngredientCount.vue';
+import UserRating from './UserRating.vue';
 
 export default {
     components: {
     CookingTime,
     DescriptionShort,
     IngredientCount,
+    UserRating,
     },
     props: {
         category: String
