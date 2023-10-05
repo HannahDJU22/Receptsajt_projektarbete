@@ -14,11 +14,14 @@ import DescriptionShort from './DescriptionShort.vue';
 import IngredientCount from './IngredientCount.vue';
 
 export default {
-    components:{
+    components: {
     CookingTime,
     DescriptionShort,
     IngredientCount,
-},
+    },
+    props: {
+        category: String
+    },
     data() {
         return {
             desc: 'RECEPT:',
@@ -29,6 +32,21 @@ export default {
         fetch('https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes')
             .then(response => response.json())
             .then(data => { this.recipeData = data })
+            
+        this.$watch(
+            () => this.category,
+            () => {
+                if (this.category !== undefined) {
+                    fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/categories/${this.category}/recipes`)
+                        .then(response => response.json())
+                        .then(data => { this.recipeData = data })
+                }
+                else {
+                    fetch('https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes')
+                        .then(response => response.json())
+                        .then(data => { this.recipeData = data })
+                }
+            })
     },
 }
 </script>

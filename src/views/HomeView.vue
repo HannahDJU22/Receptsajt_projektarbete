@@ -6,7 +6,8 @@
 <SearchRecipe></SearchRecipe>
     </p>
     <main>
-        <RecipeDescription />
+        category id: {{ selectedCategory }}
+        <RecipeDescription :category=selectedCategory />
     </main>
 </template>
 
@@ -23,8 +24,16 @@ export default {
     },
     data() {
         return {
-
+            selectedCategory: this.$route.params.categoryId
         }
+    },
+    created() {
+        this.$watch (
+            () => this.$route.params,
+            (toParams) => {
+                this.selectedCategory = toParams.categoryId
+            }
+        )
     }
 }
 </script>
