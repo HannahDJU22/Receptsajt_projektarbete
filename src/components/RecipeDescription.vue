@@ -1,7 +1,34 @@
 <template>
     <div>
-        <h2>{{ desc }}</h2>
-        <ul>
+        <div v-for="recipe in recipeData" :key="recipe.id" class="recipe-block">
+            <div class="recipe-grid">
+                <div class="grid-row-1">
+                    <div class="grid-row-1-left">
+                        <h3>{{ recipe.title }}</h3>
+                        <UserRating />
+                    </div>
+                    <div class="grid-row-1-right">
+                        <RecipeImage />
+                    </div>
+                </div>
+                <div class="grid-row-2">
+                    <DescriptionShort :recipe="recipe" />
+                </div>
+                <div class="grid-row-3">
+                    <div class="grid-row-3-left">
+                        <IngredientCount :ingredientCount="recipe.ingredients.length" />
+                    </div>
+                    <div class="grid-row-3-center">
+                        <CookingTime :recipe="recipe" />
+                    </div>
+                    <div class="grid-row-3-right">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <ul>
             <li v-for="recipe in recipeData" :key="recipe.id">
                 {{ recipe.title }}
                 <CookingTime :recipe="recipe" />
@@ -10,7 +37,7 @@
                 <UserRating />
                 <RecipeImage />
             </li>
-        </ul>
+        </ul> -->
     </div>
 </template>
 
@@ -34,7 +61,6 @@ export default {
     },
     data() {
         return {
-            desc: 'RECEPT:',
             recipeData: [],
         }
     },
@@ -61,4 +87,57 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.recipe-block {
+    background-color: beige;
+    border: 1px solid darkgrey;
+    padding: 10px;
+    margin: 10px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, auto);
+}
+
+.grid-row-1 {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid-row-1-left {
+    color: rgb(107, 25, 25);
+}
+
+.grid-row-1-right {
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.grid-row-2 {
+    grid-column: span 2;
+}
+
+.grid-row-3 {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid-row-3-left {
+    font-style: italic;
+}
+
+.grid-row-3-center {
+    font-style: italic;
+}
+
+.grid-row-3-right {
+    font-style: bold;
+}</style>
