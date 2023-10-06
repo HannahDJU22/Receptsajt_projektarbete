@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="recipe in recipeData" :key="recipe.id" class="recipe-block">
+        <div v-for="recipe in recipeData" :key="recipe._id" class="recipe-block">
             <div class="recipe-grid">
                 <div class="grid-row-1">
                     <div class="grid-row-1-left">
@@ -24,6 +24,7 @@
                     </div>
                     <div class="grid-row-3-right">
                     </div>
+                    <RouterLink :to="{ name: 'recipe', params: { recipeId: recipe._id }}">Go to recipe</RouterLink>
                 </div>
             </div>
         </div>
