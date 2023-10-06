@@ -1,16 +1,18 @@
 <template>
     <div>
-{{ searching }}
+<input type="text" v-model="searchRecipe" @input="recipeSearch" placeholder="Sök recept">
     </div>
 </template>
 
 <script>
     export default {
+      
         data(){
             return{
-                searching: 'SÖKA SÖKA SÖKA på recept!'
+                searchRecipe: ''
             }
-        }
+        },
+    
     }
 </script>
 
