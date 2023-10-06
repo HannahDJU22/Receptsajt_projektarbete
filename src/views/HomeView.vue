@@ -1,6 +1,6 @@
 <template>
     <div>
-<WelcomeText></WelcomeText>
+<WelcomeText :text="homeText" />
     </div>
     <p>
 <SearchRecipe></SearchRecipe>
@@ -24,7 +24,8 @@ export default {
     },
     data() {
         return {
-            selectedCategory: this.$route.params.categoryId
+            selectedCategory: this.$route.params.categoryId,
+            homeText: "Här kan du ta del av Davids magiska och veganska recept! ENJOY!",
         }
     },
     created() {

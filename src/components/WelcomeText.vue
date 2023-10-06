@@ -6,16 +6,14 @@
 
 <script>
     export default {
-        data(){
-            return{
-            text: "Här kan du ta del av Davids magiska och veganska recept! ENJOY!"
+        props: {
+            text: String,
         }
-    }
     }
 </script>
 
 <style scoped>
 div{
-    font-size: 25px;
+    font-size: 20px;
 }
 </style>
