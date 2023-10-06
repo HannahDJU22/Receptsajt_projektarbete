@@ -32,6 +32,14 @@ export default {
             () => this.$route.params,
             (toParams) => {
                 this.selectedCategory = toParams.categoryId
+                let categories = document.getElementsByClassName("category")
+                for (const element of categories) {
+                        element.classList.remove("bolded")
+                }
+                if (this.selectedCategory !== undefined) {
+                    let currentCategory = document.getElementById(this.selectedCategory)
+                    currentCategory.classList.add("bolded")
+                }
             }
         )
     }

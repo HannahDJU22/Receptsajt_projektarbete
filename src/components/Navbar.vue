@@ -1,6 +1,6 @@
 <template>
     <header>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/" @click="makeBold(null)">Home</RouterLink>
     </header>
     <div>
         <h3>{{ message }}</h3>
@@ -33,14 +33,17 @@ export default {
             .catch(error => { console.error('An error occured: ', error); });
     },
     methods: {
-            makeBold(selectedCategory) {
-                for (const element of this.categories) {
-                        element.classList.remove("bolded")
-                    }
+        makeBold(selectedCategory) {
+            let categories = document.getElementsByClassName("category")
+            for (const element of categories) {
+                    element.classList.remove("bolded")
+                }
+            if (selectedCategory !== null) {
                 let currentCategory = document.getElementById(selectedCategory)
                 currentCategory.classList.add("bolded")
             }
-        },
+        }
+    },
     components: { Category }
 }
 </script>
