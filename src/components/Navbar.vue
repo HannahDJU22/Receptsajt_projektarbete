@@ -1,6 +1,6 @@
 <template>
     <header>
-        <RouterLink to="/">Home</RouterLink>  |   <RouterLink to="/recipe/1">Recipe</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
     </header>
     <div>
         <h3>{{ message }}</h3>

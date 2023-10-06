@@ -4,7 +4,8 @@
             <div class="recipe-grid">
                 <div class="grid-row-1">
                     <div class="grid-row-1-left">
-                        <h3>{{ recipe.title }}</h3>
+                        <RouterLink to="/recipe/1">
+                        <h3>{{ recipe.title }}</h3></RouterLink>
                         <UserRating />
                     </div>
                     <div class="grid-row-1-right">
@@ -22,22 +23,10 @@
                         <CookingTime :recipe="recipe" />
                     </div>
                     <div class="grid-row-3-right">
-
                     </div>
-
                 </div>
             </div>
         </div>
-        <!-- <ul>
-            <li v-for="recipe in recipeData" :key="recipe.id">
-                {{ recipe.title }}
-                <CookingTime :recipe="recipe" />
-                <DescriptionShort :recipe="recipe" />
-                <IngredientCount :ingredientCount="recipe.ingredients.length" />
-                <UserRating />
-                <RecipeImage />
-            </li>
-        </ul> -->
     </div>
 </template>
 
@@ -47,15 +36,17 @@ import DescriptionShort from './DescriptionShort.vue';
 import IngredientCount from './IngredientCount.vue';
 import UserRating from './UserRating.vue';
 import RecipeImage from './RecipeImage.vue';
+import { RouterLink } from 'vue-router';
 
 export default {
     components: {
-        CookingTime,
-        DescriptionShort,
-        IngredientCount,
-        UserRating,
-        RecipeImage,
-    },
+    CookingTime,
+    DescriptionShort,
+    IngredientCount,
+    UserRating,
+    RecipeImage,
+    RouterLink
+},
     props: {
         category: String
     },
