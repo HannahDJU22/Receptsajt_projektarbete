@@ -16,12 +16,18 @@ export default {
             selectedRecipe: this.$route.params.recipeId,
             listOfIngredients: [{ name: 'carrot', amount: '2', unit: 'pieces' }]
         }
+    },
+    methods:{
+        getRecipeName(recipeId){
+            const recipe = this.recipes.find(r => r.id===parseInt(recipeId))
+            return recipe ? recipe.name : 'Recept saknas'
+        }
     }
 }
 </script>
 <template>
     <p>
-        id:{{ selectedRecipe }}
+        Valt recept: {{ getRecipeName(selectedRecipe) }}
     </p>
     <Ingredients :ingredients="listOfIngredients"></Ingredients>
 </template>
