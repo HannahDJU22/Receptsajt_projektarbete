@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import Category from './Category.vue';  
+import Category from './Category.vue';
+import { makeBold } from '../components/Category.vue';
 
 export default {
     data() {
         return {
             message: 'Receptkategorier',
             apiData: [],
-            categories: document.getElementsByClassName("category")
         };
     },
     created() {
@@ -32,20 +32,10 @@ export default {
             .then(data => { this.apiData = data; })
             .catch(error => { console.error('An error occured: ', error); });
     },
-    methods: {
-        makeBold(selectedCategory) {
-            let categories = document.getElementsByClassName("category")
-            for (const element of categories) {
-                    element.classList.remove("bolded")
-                }
-            if (selectedCategory !== null) {
-                let currentCategory = document.getElementById(selectedCategory)
-                currentCategory.classList.add("bolded")
-            }
-        }
-    },
     components: { Category }
 }
+
+
 </script>
 
 <style scoped>
