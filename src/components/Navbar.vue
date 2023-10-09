@@ -1,14 +1,14 @@
 <template>
     <header>
-        <RouterLink to="/" @click="makeBold(null)">Home</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
     </header>
     <div>
         <h3>{{ message }}</h3>
         <ul>
             <li v-for="item in apiData" :key="item.id">
                 
-                <RouterLink :to="`/category/${item.name}`" @click="makeBold(item.name)">
-                    <Category :name="item.name" :count="item.count" />
+                <RouterLink :to="`/category/${item.name}`">
+                    <Category :name="item.name" :count="item.count" :is-active="this.$route.params.categoryId == item.name"/>
                 </RouterLink>
             </li>
         </ul>
@@ -17,7 +17,6 @@
 
 <script>
 import Category from './Category.vue';
-import { makeBold } from '../components/Category.vue';
 
 export default {
     data() {
