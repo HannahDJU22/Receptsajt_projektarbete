@@ -7,8 +7,8 @@
         <ul>
             <li v-for="item in apiData" :key="item.id">
                 
-                <RouterLink :to="`/category/${item.name}`" @click="makeBold(item.name)">
-                    <Category :name="item.name" :count="item.count" />
+                <RouterLink :to="`/category/${item.name}`">
+                    <Category :name="item.name" :count="item.count" :is-active="this.$route.params.categoryId == item.name"/>
                 </RouterLink>
             </li>
         </ul>
@@ -16,14 +16,13 @@
 </template>
 
 <script>
-import Category from './Category.vue';  
+import Category from './Category.vue';
 
 export default {
     data() {
         return {
             message: 'Receptkategorier',
             apiData: [],
-            categories: document.getElementsByClassName("category")
         };
     },
     created() {
@@ -32,17 +31,10 @@ export default {
             .then(data => { this.apiData = data; })
             .catch(error => { console.error('An error occured: ', error); });
     },
-    methods: {
-            makeBold(selectedCategory) {
-                for (const element of this.categories) {
-                        element.classList.remove("bolded")
-                    }
-                let currentCategory = document.getElementById(selectedCategory)
-                currentCategory.classList.add("bolded")
-            }
-        },
     components: { Category }
 }
+
+
 </script>
 
 <style scoped>

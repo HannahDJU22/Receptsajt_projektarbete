@@ -35,6 +35,6 @@ export default {
                 this.selectedCategory = toParams.categoryId
             }
         )
-    }
+    },
 }
 </script>

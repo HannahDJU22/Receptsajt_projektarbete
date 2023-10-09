@@ -1,5 +1,5 @@
 <template>
-    <div :id=name class="category">
+    <div :class="{bolded: isActive}">
         {{ name }} ({{ count }})
     </div>
 </template>
@@ -8,9 +8,9 @@
     export default {
         props: {
             name: String,
-            count: Number
+            count: Number,
+            isActive: Boolean
         }
-   
     }
 </script>
 
