@@ -1,32 +1,32 @@
 <template>
     <div>
         <div v-for="recipe in recipeData" :key="recipe._id" class="recipe-block">
-            <div class="recipe-grid">
-                <div class="grid-row-1">
-                    <div class="grid-row-1-left">
-                        <RouterLink to="/recipe/1">
-                        <h3>{{ recipe.title }}</h3></RouterLink>
-                        <UserRating />
+            <RouterLink :to="{ name: 'recipe', params: { recipeId: recipe._id }}">
+                <div class="recipe-grid">
+                    <div class="grid-row-1">
+                        <div class="grid-row-1-left">
+                            <h3>{{ recipe.title }}</h3>
+                            <UserRating />
+                        </div>
+                        <div class="grid-row-1-right">
+                            <RecipeImage />
+                        </div>
                     </div>
-                    <div class="grid-row-1-right">
-                        <RecipeImage />
+                    <div class="grid-row-2">
+                        <DescriptionShort :recipe="recipe" />
+                    </div>
+                    <div class="grid-row-3">
+                        <div class="grid-row-3-left">
+                            <IngredientCount :ingredientCount="recipe.ingredients.length" />
+                        </div>
+                        <div class="grid-row-3-center">
+                            <CookingTime :recipe="recipe" />
+                        </div>
+                        <div class="grid-row-3-right">
+                        </div>
                     </div>
                 </div>
-                <div class="grid-row-2">
-                    <DescriptionShort :recipe="recipe" />
-                </div>
-                <div class="grid-row-3">
-                    <div class="grid-row-3-left">
-                        <IngredientCount :ingredientCount="recipe.ingredients.length" />
-                    </div>
-                    <div class="grid-row-3-center">
-                        <CookingTime :recipe="recipe" />
-                    </div>
-                    <div class="grid-row-3-right">
-                    </div>
-                    <RouterLink :to="{ name: 'recipe', params: { recipeId: recipe._id }}">Go to recipe</RouterLink>
-                </div>
-            </div>
+            </RouterLink>
         </div>
     </div>
 </template>
