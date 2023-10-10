@@ -1,8 +1,8 @@
 <template>
     <div>
         <h2>Kommentarer:</h2>
-        <CommentForm />
-        <CommentList />
+        <CommentForm :recipe-id="recipeId"/>
+        <CommentList :recipe-id="recipeId"/>
     </div>
 </template>
 
@@ -13,6 +13,9 @@ export default {
     components: {
         CommentForm,
         CommentList
+    },
+    props: {
+        recipeId: String
     }
 }
 </script>

@@ -6,7 +6,7 @@
       <h1>{{ recipe.title }}</h1>
       <p>{{ recipe.description }}</p>
     </div>
-    <CommentSection/>
+    <CommentSection :recipe-id="recipeId"/>
   </div>
 </template>
   
@@ -31,7 +31,7 @@ export default {
             this.loading = true;
             this.error = null;
             this.recipe = null;
-            //const recipeId = this.recipeId //this.$route.params.recipeId;
+            
             fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes/${this.recipeId}`)
                 .then((response) => {
                 if (!response.ok) {
