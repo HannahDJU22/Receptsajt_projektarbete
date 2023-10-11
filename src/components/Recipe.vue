@@ -4,6 +4,8 @@
     <div v-if="error" class="error">{{ error }}</div>
     <div v-if="recipe">
       <RecipeCard :recipe="recipe" class="card"/>
+      <Ingredients :ingredients="recipe.ingredients"/>
+      <Instructions :recipe="recipe"/>
     </div>
     <CommentSection :recipe-id="recipeId" class="comment"/>
   </div>
@@ -12,6 +14,8 @@
 <script>
 import RecipeCard from './RecipeCard.vue';
 import CommentSection from './CommentSection.vue';
+import Ingredients from './Ingredients.vue';
+import Instructions from './Instructions.vue';
 
 export default {
     data() {
@@ -53,9 +57,11 @@ export default {
         },
     },
     components: {
-      RecipeCard,
-      CommentSection
-    }
+    RecipeCard,
+    CommentSection,
+    Ingredients,
+    Instructions
+}
 };
 </script>
 
