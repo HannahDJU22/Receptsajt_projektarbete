@@ -5,11 +5,13 @@
     <div v-if="recipe">
       <RecipeCard :recipe="recipe"/>
     </div>
+    <CommentSection :recipe-id="recipeId"/>
   </div>
 </template>
   
 <script>
 import RecipeCard from './RecipeCard.vue';
+import CommentSection from './CommentSection.vue';
 
 export default {
     data() {
@@ -30,7 +32,7 @@ export default {
             this.loading = true;
             this.error = null;
             this.recipe = null;
-            //const recipeId = this.recipeId //this.$route.params.recipeId;
+
             fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes/${this.recipeId}`)
                 .then((response) => {
                 if (!response.ok) {
@@ -50,7 +52,10 @@ export default {
             });
         },
     },
-    components: { RecipeCard }
+    components: {
+      RecipeCard,
+      CommentSection
+    }
 };
 </script>
   
