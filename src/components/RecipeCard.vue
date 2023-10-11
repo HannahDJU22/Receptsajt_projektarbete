@@ -61,6 +61,7 @@ import RecipeImage from './RecipeImage.vue';
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 5px solid darkgrey;
 }
 
 .grid-row-1-left {
@@ -75,6 +76,7 @@ import RecipeImage from './RecipeImage.vue';
 
 .grid-row-2 {
     grid-column: span 2;
+    border: 5px solid darkgrey;
 }
 
 .grid-row-3 {
@@ -82,6 +84,7 @@ import RecipeImage from './RecipeImage.vue';
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 5px solid darkgrey;
 }
 
 .grid-row-3-left {

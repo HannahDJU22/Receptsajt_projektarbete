@@ -48,7 +48,8 @@ export default {
 <style scoped>
 .recipe-block {
     background-color: beige;
-    border: 1px solid darkgrey;
+    border: 5px solid darkgrey;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
 }
