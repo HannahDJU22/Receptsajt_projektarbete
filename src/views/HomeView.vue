@@ -7,12 +7,12 @@
     </p>
     <main>
         category id: {{ selectedCategory }}
-        <RecipeDescription :category=selectedCategory />
+        <RecipeCardList :category=selectedCategory />
     </main>
 </template>
 
 <script>
-import RecipeDescription from '../components/RecipeDescription.vue';
+import RecipeCardList from '../components/RecipeCardList.vue';
 import WelcomeText from '../components/WelcomeText.vue';
 import SearchRecipe from '../components/SearchRecipe.vue';
 
@@ -20,7 +20,7 @@ export default {
     components: {
         WelcomeText,
         SearchRecipe,
-        RecipeDescription,
+        RecipeCardList,
     },
     data() {
         return {
