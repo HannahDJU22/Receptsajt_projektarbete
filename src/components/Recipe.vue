@@ -3,11 +3,21 @@
     <div v-if="loading" class="loading">Loading...</div>
     <div v-if="error" class="error">{{ error }}</div>
     <div v-if="recipe">
-      <RecipeCard :recipe="recipe" class="card"/>
-      <Ingredients :ingredients="recipe.ingredients"/>
-      <Instructions :recipe="recipe"/>
+        <div class="card">
+            <RecipeCard :recipe="recipe"/>
+        </div>
+        <div class="ingredients">
+            <h4>Ingredienser</h4>
+            <Ingredients :ingredients="recipe.ingredients" />
+        </div>
+        <div class="instructions">
+            <h4>Gör så här:</h4>
+            <Instructions :recipe="recipe" />
+        </div>
+        <div class="comment">
+            <CommentSection :recipe-id="recipeId" />
+        </div>
     </div>
-    <CommentSection :recipe-id="recipeId" class="comment"/>
   </div>
 </template>
   
@@ -66,12 +76,24 @@ export default {
 </script>
 
 <style scoped>
+div{
+padding: 5px;
+}
 .card{
-    background-color: rgb(207, 207, 100);
+    background-color: rgb(218, 218, 179);
+    margin-bottom: 5px;
 }
 
 .comment{
-    background-color: rgb(243, 178, 171);
+    background-color: rgb(160, 153, 153);
+}
+.ingredients{
+    background-color: rgb(218, 218, 200);
+    margin-bottom: 5px;;
+}
+.instructions{
+    background-color: rgb(241, 213, 176);
+    margin-bottom: 5px;
 }
 </style>
   
