@@ -22,10 +22,13 @@ export default {
         };
     },
     created() {
-        fetch('https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes')
-            .then(response => response.json())
-            .then(data => { this.recipeData = data; });
+        this.fetchRecipes();
         this.$watch(() => this.category, () => {
+            this.fetchRecipes();
+        });
+    },
+    methods: {
+        fetchRecipes() {
             if (this.category !== undefined) {
                 fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/categories/${this.category}/recipes`)
                     .then(response => response.json())
@@ -36,7 +39,7 @@ export default {
                     .then(response => response.json())
                     .then(data => { this.recipeData = data; });
             }
-        });
+        }
     },
     components: {
         RecipeCard,
