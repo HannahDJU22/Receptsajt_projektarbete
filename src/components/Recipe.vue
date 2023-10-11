@@ -3,15 +3,16 @@
     <div v-if="loading" class="loading">Loading...</div>
     <div v-if="error" class="error">{{ error }}</div>
     <div v-if="recipe">
-      <h1>{{ recipe.title }}</h1>
-      <p>{{ recipe.description }}</p>
+      <RecipeCard :recipe="recipe"/>
     </div>
     <CommentSection :recipe-id="recipeId"/>
   </div>
 </template>
   
 <script>
+import RecipeCard from './RecipeCard.vue';
 import CommentSection from './CommentSection.vue';
+
 export default {
     data() {
         return {
@@ -31,7 +32,7 @@ export default {
             this.loading = true;
             this.error = null;
             this.recipe = null;
-            
+
             fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes/${this.recipeId}`)
                 .then((response) => {
                 if (!response.ok) {
@@ -51,7 +52,10 @@ export default {
             });
         },
     },
-    components: { CommentSection }
+    components: {
+      RecipeCard,
+      CommentSection
+    }
 };
 </script>
   
