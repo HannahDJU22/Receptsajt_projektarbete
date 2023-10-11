@@ -7,7 +7,7 @@
                     <UserRating />
                 </div>
                 <div class="grid-row-1-right">
-                    <RecipeImage />
+                    <RecipeImage :recipe="recipe"/>
                 </div>
             </div>
             <div class="grid-row-2">
@@ -69,7 +69,6 @@ import RecipeImage from './RecipeImage.vue';
 }
 
 .grid-row-1-right {
-    background-color: aqua;
     border: 1px solid black;
     border-radius: 10px;
 }

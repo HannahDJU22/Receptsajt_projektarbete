@@ -1,19 +1,20 @@
 <template>
     <div>
-{{ image }}
+<img :src="recipe.imageUrl" alt="Receptbild">
     </div>
 </template>
 
 <script>
     export default {
-        data(){
-            return{
-                image: 'MATBILD'
-            }
-        }
+       props:{
+        recipe: Object,
+       }
     }
 </script>
 
 <style scoped>
-
+img{
+    width: 100px;
+    height: auto;
+}
 </style>
