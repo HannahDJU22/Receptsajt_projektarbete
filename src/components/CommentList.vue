@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h2>Kommentarer</h2>
         <ul>
             <li v-for="comment in comments" :key="comment._id">{{ comment.name }}: {{ comment.comment }}</li>
         </ul>

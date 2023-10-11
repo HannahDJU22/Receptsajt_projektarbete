@@ -6,7 +6,7 @@
 <SearchRecipe></SearchRecipe>
     </p>
     <main>
-        category id: {{ selectedCategory }}
+        <!-- category id: {{ selectedCategory }} -->
         <RecipeCardList :category=selectedCategory />
     </main>
 </template>

@@ -51,9 +51,9 @@ export default {
 <style scoped>
 .recipe-block {
     background-color: beige;
-    border: 5px solid darkgrey;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+    border: 3px solid darkgrey;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 5px;
 }
 </style>

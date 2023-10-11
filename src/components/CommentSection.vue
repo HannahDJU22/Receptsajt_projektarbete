@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h2>Kommentarer:</h2>
-        <CommentForm :recipe-id="recipeId"/>
+        <h2>Kommentar</h2>
+        <CommentForm :recipe-id="recipeId"/><br>
         <CommentList :recipe-id="recipeId"/>
     </div>
 </template>
