@@ -44,6 +44,6 @@ export default {
 }
 
 h3 {
-    color: crimson
+    color: rgb(32, 34, 196)
 }
 </style>
