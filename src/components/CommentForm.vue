@@ -1,10 +1,13 @@
 <template>
     <div>
+        <fieldset>
+            <legend>Lämna gärna en kommentar</legend>
         <label for="name">Namn:</label><br>
         <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName"><br>
         <label for="name">Kommentar:</label><br>
         <input type="text" id="comment" placeholder="Skriv din kommentar" name="comment" v-model="commentBody">
         <button type="button" @click="submitComment()">Skicka kommentar</button>
+    </fieldset>
     </div>
 </template>
 
