@@ -17,6 +17,9 @@
         <div class="comment">
             <CommentSection :recipe-id="recipeId" />
         </div>
+        <div class="rating">
+            <UserRating />
+        </div>
     </div>
   </div>
 </template>
@@ -26,6 +29,7 @@ import RecipeCard from './RecipeCard.vue';
 import CommentSection from './CommentSection.vue';
 import Ingredients from './Ingredients.vue';
 import Instructions from './Instructions.vue';
+import UserRating from './UserRating.vue';
 
 export default {
     data() {
@@ -70,7 +74,8 @@ export default {
     RecipeCard,
     CommentSection,
     Ingredients,
-    Instructions
+    Instructions,
+    UserRating
 }
 };
 </script>
@@ -94,6 +99,10 @@ padding: 5px;
 .instructions{
     background-color: rgb(241, 213, 176);
     margin-bottom: 5px;
+}
+.rating{
+    background-color: rgb(175, 221, 240);
+    margin-top: 5px;
 }
 </style>
   
