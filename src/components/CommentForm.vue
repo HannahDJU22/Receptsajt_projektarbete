@@ -1,14 +1,20 @@
 <template>
     <div>
-        <fieldset>
-            <legend>Lämna gärna en kommentar</legend>
-            <label for="name">Namn:</label><br>
-            <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required><br>
-            <label for="name">Kommentar:</label><br>
-            <input type="text" id="comment" placeholder="Skriv din kommentar" name="comment" v-model="commentBody" required>
-            <button type="button" @click="submitComment()">Skicka kommentar</button>
-            <p v-if="isError" class="error-msg">Både namn och kommentar måste fyllas i!</p>
-        </fieldset>
+        <form v-if="!formSubmitted">
+            <fieldset>
+                <legend>Lämna gärna en kommentar</legend>
+                <label for="name">Namn:</label><br>
+                <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required><br>
+                <label for="name">Kommentar:</label><br>
+                <input type="text" id="comment" placeholder="Skriv din kommentar" name="comment" v-model="commentBody"
+                    required>
+                <button type="button" @click="submitComment()">Skicka kommentar</button>
+                <p v-if="isError" class="error-msg">Både namn och kommentar måste fyllas i!</p>
+            </fieldset>
+        </form>
+        <form v-else>
+            <p id="confirm-comment"> {{ userName }} - Tack för din kommentar!</p>
+        </form>
     </div>
 </template>
 
@@ -20,6 +26,7 @@ export default {
             userName: null,
             commentBody: null,
             isError: false,
+            formSubmitted: false,
         };
     },
     props: {
@@ -45,14 +52,22 @@ export default {
             })
                 .then((response) => response.json())
                 .then((json) => console.log(json));
+
+            this.formSubmitted = true;
         }
     }
 }
 </script>
 
 <style scoped>
-.error-msg{
+.error-msg {
     color: red;
     font-size: 20px;
+}
+
+#confirm-comment {
+    font-size: 20px;
+    font-style: bold;
+    color: black;
 }
 </style>
