@@ -1,5 +1,8 @@
 <template>
     <div>
+        <p>
+            <SearchRecipe @search-field-update="searchRecipe"/>
+        </p>
         <div v-for="recipe in recipeData" :key="recipe._id" class="recipe-block">
             <RouterLink :to="{ name: 'recipe', params: { recipeId: recipe._id }}">
                 <RecipeCard :recipe="recipe"/>
@@ -9,7 +12,8 @@
 </template>
 
 <script>
-import RecipeCard from './RecipeCard.vue'
+import RecipeCard from './RecipeCard.vue';
+import SearchRecipe from './SearchRecipe.vue';
 import { RouterLink } from 'vue-router';
 
 export default {
@@ -39,11 +43,17 @@ export default {
                     .then(response => response.json())
                     .then(data => { this.recipeData = data; });
             }
+        },
+        searchRecipe(query) {
+            fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes?query=${query}`)
+                .then(response => response.json())
+                .then(data => { this.recipeData = data; });
         }
     },
     components: {
         RecipeCard,
-        RouterLink
+        RouterLink,
+        SearchRecipe,
     }
 }
 </script>

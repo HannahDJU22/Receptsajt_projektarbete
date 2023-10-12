@@ -2,9 +2,6 @@
     <div>
 <WelcomeText :text="homeText" />
     </div>
-    <p>
-<SearchRecipe></SearchRecipe>
-    </p>
     <main>
         <!-- category id: {{ selectedCategory }} -->
         <RecipeCardList :category=selectedCategory />
@@ -14,12 +11,10 @@
 <script>
 import RecipeCardList from '../components/RecipeCardList.vue';
 import WelcomeText from '../components/WelcomeText.vue';
-import SearchRecipe from '../components/SearchRecipe.vue';
 
 export default {
     components: {
         WelcomeText,
-        SearchRecipe,
         RecipeCardList,
     },
     data() {
