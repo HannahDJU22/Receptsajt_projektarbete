@@ -3,11 +3,11 @@
         <form v-if="!formSubmitted">
             <fieldset>
                 <legend>Lämna gärna en kommentar</legend>
+                <label for="comment">Kommentar:</label><br>
+                <textarea id="comment" placeholder="Skriv din kommentar" name="comment" v-model="commentBody" required
+                    rows="3" cols="50"></textarea><br>
                 <label for="name">Namn:</label><br>
-                <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required><br>
-                <label for="name">Kommentar:</label><br>
-                <input type="text" id="comment" placeholder="Skriv din kommentar" name="comment" v-model="commentBody"
-                    required>
+                <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required>
                 <button type="button" @click="submitComment()">Skicka kommentar</button>
                 <p v-if="isError" class="error-msg">Både namn och kommentar måste fyllas i!</p>
             </fieldset>
@@ -69,5 +69,8 @@ export default {
     font-size: 20px;
     font-style: bold;
     color: black;
+}
+#name{
+    margin-right: 20px;
 }
 </style>
