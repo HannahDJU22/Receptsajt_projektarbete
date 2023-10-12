@@ -73,4 +73,7 @@ export default {
 #name{
     margin-right: 20px;
 }
+#comment{
+    width: 50%;
+}
 </style>
