@@ -8,23 +8,24 @@
                 <label for="comment" id="form-block">
                     Kommentar:
                 </label>
-                <textarea id="comment" placeholder="Skriv din kommentar" name="comment" v-model="commentBody" required rows="3" cols="50">
+                <textarea id="comment" placeholder="Skriv din kommentar" name="comment" v-model="commentBody" required
+                    rows="3" cols="50" :disabled="formSubmitted">
                 </textarea>
                 <label for="name" id="form-block">
                     Namn:
                 </label>
-                <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required>
-                <button type="button" @click="submitComment()">
+                <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required
+                    :disabled="formSubmitted">
+                <button type="button" @click="submitComment()" :disabled="formSubmitted">
                     Skicka kommentar
                 </button>
-                <p v-if="isError" class="error-msg">
-                    Både namn och kommentar måste fyllas i!
+                <p v-if="isError" class="error-msg">{{ errorMsg }}
                 </p>
             </fieldset>
         </form>
-        <form v-else>
-            <p id="confirm-comment"> {{ userName }} - Tack för din kommentar!</p>
-        </form>
+        <div v-else="formSubmitted">
+            <p id="confirm-comment" v-if="showConfirmation"> {{ userName }} - {{ confirmation }}</p>
+        </div>
     </div>
 </template>
 
@@ -38,6 +39,9 @@ export default {
             timestamp: null,
             isError: false,
             formSubmitted: false,
+            confirmation: 'Tack för din kommentar!',
+            errorMsg: 'Både namn och kommentar måste fyllas i!',
+            showConfirmation: false,
         };
     },
     props: {
@@ -64,6 +68,10 @@ export default {
                 .then((json) => console.log(json));
 
             this.formSubmitted = true;
+
+            setTimeout(() => {
+                this.showConfirmation = true;
+            }, 2000);
         }
     }
 }
@@ -82,7 +90,7 @@ export default {
 }
 
 #name {
-    
+
     margin-right: 20px;
 }
 
@@ -90,8 +98,13 @@ export default {
     display: block;
     width: 50%;
 }
-#form-block{
+
+#form-block {
     display: block;
 }
 
+::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
 </style>
