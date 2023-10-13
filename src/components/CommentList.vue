@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li v-for="comment in comments" :key="comment._id">
-                <div class="comment-list-date">{{ comment.createdAt }}</div>
+                <div class="comment-list-date">{{ formatDate(comment.createdAt) }}</div>
                 <div class="comment-list-name"> {{ comment.name }}</div>
                 <div class="comment-list-comment">{{ comment.comment }}</div>
             </li>
@@ -20,6 +20,15 @@ export default {
             comments: [],
         }
     },
+
+    methods: {
+        formatDate(commentDate) {
+            const dateFromAPI = new Date(commentDate);
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            return dateFromAPI.toLocaleDateString('sv-SE', dateOptions);
+        }
+    },
+
     created() {
         fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes/${this.recipeId}/comments`)
             .then(response => response.json())
@@ -31,10 +40,11 @@ export default {
 </script>
 
 <style scoped>
-ul{
+ul {
     padding-inline-start: 0;
     width: 50%;
 }
+
 li {
     list-style: none;
     border-radius: 10px;
@@ -44,11 +54,13 @@ li {
     flex-direction: column;
     background-color: rgb(230, 230, 211);
 }
-.comment-list-name{
+
+.comment-list-name {
     font-weight: bold;
     font-size: small;
 }
-.comment-list-comment{
+
+.comment-list-comment {
     font-size: smaller;
 }
 </style>

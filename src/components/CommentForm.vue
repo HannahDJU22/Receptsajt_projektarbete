@@ -58,8 +58,6 @@ export default {
                 body: JSON.stringify({
                     name: this.userName,
                     comment: this.commentBody,
-                    createdAt: this.timestamp,
-
                 })
             })
                 .then((response) => response.json())
