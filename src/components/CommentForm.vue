@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form>
+        <form v-if="!formSubmitted">
             <fieldset>
                 <legend>
                     Lämna gärna en kommentar
@@ -14,7 +14,8 @@
                 <label for="name" id="form-block">
                     Namn:
                 </label>
-                <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required :disabled="formSubmitted">
+                <input type="text" id="name" placeholder="Ditt namn" name="name" v-model="userName" required
+                    :disabled="formSubmitted">
                 <button type="button" @click="submitComment()" :disabled="formSubmitted">
                     Skicka kommentar
                 </button>
@@ -22,8 +23,8 @@
                 </p>
             </fieldset>
         </form>
-        <div v-if="formSubmitted">
-            <p id="confirm-comment"> {{ userName }} - {{ confirmation }}</p>
+        <div v-else="formSubmitted">
+            <p id="confirm-comment" v-if="showConfirmation"> {{ userName }} - {{ confirmation }}</p>
         </div>
     </div>
 </template>
@@ -40,6 +41,7 @@ export default {
             formSubmitted: false,
             confirmation: 'Tack för din kommentar!',
             errorMsg: 'Både namn och kommentar måste fyllas i!',
+            showConfirmation: false,
         };
     },
     props: {
@@ -66,6 +68,10 @@ export default {
                 .then((json) => console.log(json));
 
             this.formSubmitted = true;
+
+            setTimeout(() => {
+                this.showConfirmation = true;
+            }, 2000);
         }
     }
 }
