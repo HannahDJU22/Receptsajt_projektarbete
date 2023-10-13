@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-            <SearchRecipe @search-field-update="searchRecipe"/>
+            <SearchRecipe @search-field-update="fetchRecipes"/>
         </p>
         <div v-for="recipe in recipeData" :key="recipe._id" class="recipe-block">
             <RouterLink :to="{ name: 'recipe', params: { recipeId: recipe._id }}">
@@ -26,28 +26,23 @@ export default {
         };
     },
     created() {
-        this.fetchRecipes();
+        this.fetchRecipes('');
         this.$watch(() => this.category, () => {
-            this.fetchRecipes();
+            this.fetchRecipes('');
         });
     },
     methods: {
-        fetchRecipes() {
+        fetchRecipes(query) {
             if (this.category !== undefined) {
-                fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/categories/${this.category}/recipes`)
+                fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/categories/${this.category}/recipes?query=${query}`)
                     .then(response => response.json())
                     .then(data => { this.recipeData = data; });
             }
             else {
-                fetch('https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes')
+                fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes?query=${query}`)
                     .then(response => response.json())
                     .then(data => { this.recipeData = data; });
             }
-        },
-        searchRecipe(query) {
-            fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes?query=${query}`)
-                .then(response => response.json())
-                .then(data => { this.recipeData = data; });
         }
     },
     components: {
