@@ -121,12 +121,12 @@ GET {{baseUrl}}/recipes/632da30c6e7766b37d983811/comments
 ###
 
 # Lägger till en kommentar för ett recept
-POST {{baseUrl}}/recipes/632da30c6e7766b37d983811/comments
+POST {{baseUrl}}/recipes/65269c6899612c970cb6f6d2/comments
 Content-Type: application/json
 
 {
-    "comment": "För mycket salt!",
-    "name": "Bosse"
+    "comment": "Förvirrad",
+    "name": "Benjamin"
 }
 
 ###
