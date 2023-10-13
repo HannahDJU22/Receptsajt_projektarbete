@@ -2,8 +2,9 @@
     <div>
         <ul>
             <li v-for="comment in comments" :key="comment._id">
-                <div class="list-name"> {{ comment.name }}</div>
-                <div class="list-comment">{{ comment.comment }}</div>
+                <div class="comment-list-date">{{ comment.createdAt }}</div>
+                <div class="comment-list-name"> {{ comment.name }}</div>
+                <div class="comment-list-comment">{{ comment.comment }}</div>
             </li>
         </ul>
     </div>
@@ -43,11 +44,11 @@ li {
     flex-direction: column;
     background-color: rgb(230, 230, 211);
 }
-.list-name{
+.comment-list-name{
     font-weight: bold;
     font-size: small;
 }
-.list-comment{
+.comment-list-comment{
     font-size: smaller;
 }
 </style>

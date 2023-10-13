@@ -35,6 +35,7 @@ export default {
         return {
             userName: null,
             commentBody: null,
+            timestamp: null,
             isError: false,
             formSubmitted: false,
         };
@@ -56,7 +57,8 @@ export default {
                 },
                 body: JSON.stringify({
                     name: this.userName,
-                    comment: this.commentBody
+                    comment: this.commentBody,
+                    createdAt: this.timestamp,
 
                 })
             })
