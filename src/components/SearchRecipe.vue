@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="text" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)" placeholder="Sök recept">
+        <input type="search" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)" placeholder="Sök recept">
     </div>
 </template>
 
