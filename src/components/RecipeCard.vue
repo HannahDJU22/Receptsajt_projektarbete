@@ -61,21 +61,15 @@ import RecipeImage from './RecipeImage.vue';
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* border: 5px solid darkgrey; */
 }
 
 .grid-row-1-left {
     color: rgb(29, 14, 14);
+    font-size: large;
 }
-
-/* .grid-row-1-right {
-    border: 1px solid black;
-    border-radius: 10px;
-} */
 
 .grid-row-2 {
     grid-column: span 2;
-    /* border: 5px solid darkgrey; */
 }
 
 .grid-row-3 {
@@ -83,7 +77,6 @@ import RecipeImage from './RecipeImage.vue';
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* border: 5px solid darkgrey; */
 }
 
 .grid-row-3-left {

@@ -103,8 +103,5 @@ export default {
     display: block;
 }
 
-::placeholder {
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
-}
+
 </style>

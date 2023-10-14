@@ -11,6 +11,7 @@
   padding: 2rem;
 
   font-weight: normal;
+  background-color: rgb(212,175,55);
 }
 
 .bolded {
@@ -19,6 +20,12 @@
 
 a{
   text-decoration: none;
-  color: rgb(17, 16, 20);
+  color: rgb(37, 27, 1);
   transition: 0.4s;
+}
+::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  color: rgb(66, 65, 65);
+  font-size: 15px;
 }

@@ -3,7 +3,6 @@
 <WelcomeText :text="homeText" />
     </div>
     <main>
-        <!-- category id: {{ selectedCategory }} -->
         <RecipeCardList :category=selectedCategory />
     </main>
 </template>

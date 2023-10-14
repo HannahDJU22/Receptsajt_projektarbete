@@ -16,5 +16,6 @@
 div{
     font-size: 20px;
     text-align: center;
+    color: rgb(148, 83, 10);
 }
 </style>
