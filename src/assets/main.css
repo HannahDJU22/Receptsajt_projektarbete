@@ -29,3 +29,26 @@ a{
   color: rgb(66, 65, 65);
   font-size: 15px;
 }
+
+/*x-small*/
+@media only screen and (max-width: 600px){
+#welcome-text{
+  font-size: 15px;
+}
+}
+/*small*/
+@media (min-width: 600px) {
+  
+}
+/* medium*/
+@media (min-width: 768px) /*and (max-width: 991px)*/{
+
+}
+/*large*/
+@media (min-width: 992px){
+
+}
+/*x-large*/
+@media (min-width: 1200px){
+  
+}
