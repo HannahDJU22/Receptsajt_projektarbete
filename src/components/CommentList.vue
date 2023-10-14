@@ -57,7 +57,7 @@ li {
     padding: 5px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(230, 230, 211);
+    background-color: rgb(247, 240, 183);
 }
 
 .comment-list-box {

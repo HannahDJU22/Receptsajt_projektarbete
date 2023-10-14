@@ -102,6 +102,18 @@ export default {
 #form-block {
     display: block;
 }
+fieldset{
+    border-color: rgb(145, 66, 9);
+}
+input,textarea{
+    background-color: rgb(248, 242, 183);
+    border-color: rgb(247, 238, 160);
+    border-style: none;
+}
+button{
+    background-color: rgb(248, 196, 24);
+    border-radius: 8px;
+}
 
 
 </style>
