@@ -39,7 +39,6 @@ data(){
 
 header {
   grid-row: 1;
-  background-color: rgb(124, 163, 187);
 }
 
 header, footer {
@@ -48,18 +47,16 @@ header, footer {
 }
 
 h1{
-  font-size: 30px;
-  color: rgb(15, 15, 104);
+  font-size: 35px;
+  color: rgb(58, 43, 3);
+  font-weight: bolder;
 }
 
 main {
   grid-column: 2/3;
   grid-row: 2/3;
   text-shadow: none;
-  background-color: rgb(187, 187, 187);
 }
 
-nav{
-  background-color: rgb(187, 187, 187);
-}
+
 </style>

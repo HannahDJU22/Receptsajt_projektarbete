@@ -1,6 +1,6 @@
 <template>
     <header>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">Startsida</RouterLink>
     </header>
     <div>
         <h3>{{ message }}</h3>
@@ -44,6 +44,8 @@ export default {
 }
 
 h3 {
-    color: rgb(32, 34, 196)
+    color: rgb(59, 38, 5);
+    font-weight: bold;
+    
 }
 </style>

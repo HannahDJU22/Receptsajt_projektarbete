@@ -55,8 +55,8 @@ export default {
 
 <style scoped>
 .recipe-block {
-    background-color: beige;
-    border: 3px solid darkgrey;
+    background-color: rgb(240,230,140);
+    border: 3px solid rgb(218,165,32);
     border-radius: 7px;
     padding: 5px;
     margin: 5px;
