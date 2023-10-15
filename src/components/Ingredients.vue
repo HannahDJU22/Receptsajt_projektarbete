@@ -2,8 +2,9 @@
     <div>
         <ul>
             <li v-for="(ingredient, index) in ingredients" :key="index">
-            {{ ingredient.name }} - {{ ingredient.amount
-            }}{{ ingredient.unit }}
+                {{ ingredient.amount
+            }} {{ ingredient.unit }}
+            {{ ingredient.name }}
             </li>
         </ul>
     </div>
