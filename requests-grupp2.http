@@ -82,11 +82,11 @@ DELETE {{baseUrl}}/recipes/6526a45c99612c970cb6f81c HTTP/1.1
 ###
 
 # Uppdaterar ett recept
-PATCH {{baseUrl}}/recipes/65269c6899612c970cb6f6d2 HTTP/1.1
+PATCH {{baseUrl}}/recipes/65118ce699612c970cb379f8 HTTP/1.1
 Content-Type: application/json
 
 {
-  "imageUrl": "https://media.istockphoto.com/id/1349381997/sv/foto/female-hands-with-bowl-of-pumpkin-soup.jpg?s=1024x1024&w=is&k=20&c=bhUiCdK5Njk2txf_hEZ250boKf0Vpg6aP84fkZUVETc="
+  "imageUrl": "https://cdn.pixabay.com/photo/2021/02/03/18/03/toast-skagen-5978803_1280.jpg"
 }
 
 ###
