@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 div {
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     color: rgb(148, 83, 10);
 }

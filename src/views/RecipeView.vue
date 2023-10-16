@@ -1,5 +1,8 @@
 <template>
     <div>
+        <RouterLink to="/">Tillbaka till startsidan</RouterLink>
+    </div>
+    <div>
         <WelcomeText :text="recipeText" />
     </div>
     <Recipe :recipeId="recipeIdToDisplay" />

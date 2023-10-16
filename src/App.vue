@@ -4,9 +4,6 @@
       <MainHeader />
     </h1>
   </header>
-  <nav>
-    <Navbar />
-  </nav>
   <main>
     <RouterView />
   </main>
@@ -16,14 +13,12 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue';
 import { RouterView } from 'vue-router';
 import MainHeader from './components/MainHeader.vue';
 import MainFooter from './components/MainFooter.vue';
 
 export default {
   components: {
-    Navbar,
     MainHeader,
     MainFooter
   }
