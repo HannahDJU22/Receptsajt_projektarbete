@@ -6,9 +6,9 @@
         <h3>{{ message }}</h3>
         <ul id="category-list">
             <li v-for="item in apiData" :key="item.id">
-                
                 <RouterLink :to="`/category/${item.name}`">
-                    <Category :name="item.name" :count="item.count" :is-active="this.$route.params.categoryId == item.name"/>
+                    <Category :name="item.name" :count="item.count"
+                        :is-active="this.$route.params.categoryId == item.name" />
                 </RouterLink>
             </li>
         </ul>
@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             message: 'Receptkategorier',
-            apiData: [],
+            apiData: []
         };
     },
     created() {
@@ -33,8 +33,6 @@ export default {
     },
     components: { Category }
 }
-
-
 </script>
 
 <style scoped>
@@ -42,6 +40,5 @@ export default {
 h3 {
     color: rgb(59, 38, 5);
     font-weight: bold;
-    
 }
 </style>

@@ -12,7 +12,7 @@ export default {
         FontAwesomeIcon
     },
     props: {
-        userRating: Number,
+        userRating: Number
     },
     computed: {
         roundedRating() {

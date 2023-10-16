@@ -1,19 +1,19 @@
 <template>
     <div id="welcome-text">
-{{ text }}
+        {{ text }}
     </div>
 </template>
 
 <script>
-    export default {
-        props: {
-            text: String,
-        }
+export default {
+    props: {
+        text: String
     }
+}
 </script>
 
 <style scoped>
-div{
+div {
     font-size: 20px;
     text-align: center;
     color: rgb(148, 83, 10);
