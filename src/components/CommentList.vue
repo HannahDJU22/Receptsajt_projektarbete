@@ -10,8 +10,7 @@
             </li>
         </ul>
     </div>
-    </template>
-
+</template>
 
 <script>
 export default {
@@ -20,10 +19,9 @@ export default {
     },
     data() {
         return {
-            comments: [],
-        }
+            comments: []
+        };
     },
-
     methods: {
         formatDate(commentDate) {
             const dateFromAPI = new Date(commentDate);
@@ -31,15 +29,14 @@ export default {
             return dateFromAPI.toLocaleDateString('sv-SE', dateOptions);
         }
     },
-
     created() {
         fetch(`https://jau22-recept-grupp2-yiqamvjp984a.reky.se/recipes/${this.recipeId}/comments`)
             .then(response => response.json())
             .then(data => {
-                this.comments = data.slice().sort((a, b)=>{
+                this.comments = data.slice().sort((a, b) => {
                     return new Date(b.createdAt) - new Date(a.createdAt);
                 })
-            })
+            });
     }
 }
 </script>
@@ -77,4 +74,5 @@ li {
 .comment-list-date {
     text-align: right;
     font-size: small;
-}</style>
+}
+</style>

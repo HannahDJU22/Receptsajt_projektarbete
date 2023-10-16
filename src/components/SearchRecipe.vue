@@ -1,18 +1,17 @@
 <template>
     <div>
-        <input type="search" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)" placeholder="Sök recept">
+        <input type="search" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)"
+            placeholder="Sök recept">
     </div>
 </template>
 
 <script>
 export default {
-
     data() {
         return {
             searchRecipe: ''
-        }
-    },
-
+        };
+    }
 }
 </script>
 
@@ -20,9 +19,9 @@ export default {
 div {
     padding: 5px;
     margin: 5px;
-    
 }
-input{
+
+input {
     background-color: rgb(247, 238, 160);
     width: 35%;
     height: 30px;

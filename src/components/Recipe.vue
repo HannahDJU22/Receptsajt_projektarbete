@@ -70,7 +70,7 @@ export default {
                     this.loading = false;
                     this.error = 'Network error: ' + error.message;
                 });
-        },
+        }
     },
     components: {
         RecipeCard,
@@ -79,7 +79,7 @@ export default {
         Instructions,
         UserRating
     }
-};
+}
 </script>
 
 <style scoped>
@@ -102,7 +102,8 @@ export default {
     border: 3px solid rgb(218, 165, 32);
     border-radius: 5px;
 }
-.how-to-with-what{
+
+.how-to-with-what {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -131,5 +132,6 @@ export default {
     background-color: rgb(240, 230, 140);
     border: 3px solid rgb(218, 165, 32);
     border-radius: 5px;
-}</style>
+}
+</style>
   

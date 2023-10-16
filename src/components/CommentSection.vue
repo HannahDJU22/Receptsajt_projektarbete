@@ -1,14 +1,15 @@
 <template>
     <div>
         <h2>Kommentarer</h2>
-        <CommentForm :recipe-id="recipeId"/><br>
-        <CommentList :recipe-id="recipeId"/>
+        <CommentForm :recipe-id="recipeId" /><br>
+        <CommentList :recipe-id="recipeId" />
     </div>
 </template>
 
 <script>
 import CommentForm from './CommentForm.vue';
 import CommentList from './CommentList.vue';
+
 export default {
     components: {
         CommentForm,

@@ -9,7 +9,7 @@ export default {
     data() {
         return {
             footertext: '@copyright LOTS'
-        }
+        };
     }
 }
 </script>
