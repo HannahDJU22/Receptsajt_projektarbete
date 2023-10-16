@@ -1,3 +1,20 @@
+<template>
+  <header>
+    <h1>
+      <MainHeader></MainHeader>
+    </h1>
+  </header>
+  <nav id="nav">
+    <Navbar />
+  </nav>
+  <main>
+    <RouterView />
+  </main>
+  <footer>
+    <MainFooter></MainFooter>
+  </footer>
+</template>
+
 <script>
 import Navbar from './components/Navbar.vue';
 import { RouterLink, RouterView } from 'vue-router';
@@ -19,22 +36,6 @@ export default {
 }
 </script>
 
-<template>
-  <header>
-    <h1>
-      <MainHeader></MainHeader>
-    </h1>
-  </header>
-  <nav id="nav">
-    <Navbar />
-  </nav>
-  <main>
-    <RouterView />
-  </main>
-  <footer>
-    <MainFooter></MainFooter>
-  </footer>
-</template>
 
 <style scoped>
 
