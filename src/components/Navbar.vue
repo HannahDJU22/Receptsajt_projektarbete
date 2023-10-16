@@ -1,10 +1,10 @@
 <template>
-    <header>
+    <div>
         <RouterLink to="/">Startsida</RouterLink>
-    </header>
+    </div>
     <div>
         <h3>{{ message }}</h3>
-        <ul>
+        <ul id="category-list">
             <li v-for="item in apiData" :key="item.id">
                 <RouterLink :to="`/category/${item.name}`">
                     <Category :name="item.name" :count="item.count"
@@ -36,10 +36,6 @@ export default {
 </script>
 
 <style scoped>
-:root {
-    grid-column: 1/3;
-    grid-row: 2;
-}
 
 h3 {
     color: rgb(59, 38, 5);

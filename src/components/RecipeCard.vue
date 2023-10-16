@@ -1,11 +1,11 @@
 <template>
     <div class="recipe-grid">
         <h3 class="grid-item item-title">{{ recipe.title }}</h3>
-        <RecipeImage :recipe="recipe" class="grid-item item-img" />
-        <DescriptionShort :recipe="recipe" class="grid-item item-desc" />
-        <UserRating class="grid-item item-rating" />
-        <IngredientCount :ingredientCount="recipe.ingredients.length" class="grid-item item-ingred-count" />
-        <CookingTime :recipe="recipe" class="grid-item item-time" />
+        <RecipeImage :recipe="recipe" class="grid-item item-img"/>
+        <DescriptionShort :recipe="recipe" class="grid-item item-desc"/>
+        <UserRating :userRating="recipe.avgRating" class="grid-item item-rating"/>
+        <IngredientCount :ingredientCount="recipe.ingredients.length" class="grid-item item-ingred-count"/>
+        <CookingTime :recipe="recipe" class="grid-item item-time"/>
     </div>
 </template>
 
