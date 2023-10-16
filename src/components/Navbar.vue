@@ -1,9 +1,6 @@
 <template>
     <div>
-        <RouterLink to="/">Startsida</RouterLink>
-    </div>
-    <div>
-        <h3>{{ message }}</h3>
+        <RouterLink to="/"><h3>{{ message }}</h3></RouterLink>
         <ul id="category-list">
             <li v-for="item in apiData" :key="item.id">
                 <RouterLink :to="`/category/${item.name}`">
@@ -39,6 +36,6 @@ export default {
 
 h3 {
     color: rgb(59, 38, 5);
-    font-weight: bold;
+    text-decoration: underline;
 }
 </style>

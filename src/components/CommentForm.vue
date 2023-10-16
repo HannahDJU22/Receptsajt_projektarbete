@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="comment-form-box">
         <form v-if="!formSubmitted">
             <fieldset>
                 <legend>
@@ -86,6 +86,10 @@ export default {
     font-size: 20px;
     font-style: bold;
     color: black;
+}
+
+#comment-form-box{
+    text-align: left;
 }
 
 #name {

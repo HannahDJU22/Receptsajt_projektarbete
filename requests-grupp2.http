@@ -44,23 +44,38 @@ POST {{baseUrl}}/recipes HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Bruscetta",
-    "description": "Att börja med",
-    "ratings": [2, 3, 4, 1, 2, 3],
-    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_223427/cf_259/korvstroganoff_med_ris.jpg",
-    "timeInMins": 15,
-    "categories": [ "Förrätt", "Italienskt" ],
-    "instructions": [ "Stek brödet", "Hacka tomater och Mozarella", "Lägg på brödet"],
+    "title": "Wok med glasnudlar",
+    "description": "Wokade mungböngroddar med rostade jordnötter, strimlad bladselleri och glasnudlar. En vegansk wok som du snabbt fräser ihop!",
+    "ratings": [2, 3, 3, 4, 1, 2, 5, 3, 2],
+    "imageUrl": "https://cdn.pixabay.com/photo/2015/09/29/11/30/wok-963754_640.jpg",
+    "timeInMins": 10,
+    "categories": [ "Wok" ],
+    "instructions": [ "Hetta upp olja i en wok eller stekpanna", "Fräs löken och lägg i groddar och selleri", "Blanda ner nudlarna och stek hastigt på hög värme", "Smaka av med salt och servera direkt"],
     "ingredients": [
         {
-            "name": "Bröd",
-            "amount": 1,
-            "unit": "skiva"
+            "name": "Olja (jordnötsolja och solrosolja",
+            "amount": 4,
+            "unit": "msk"
         },
         {
-            "name": "Tomat",
-            "amount": 2,
-            "unit": "stycken"
+            "name": "Salladslök",
+            "amount": 4,
+            "unit": "st"
+        },
+        {
+            "name": "Mungbönsgroddar",
+            "amount": 1,
+            "unit": "dl"
+        },
+        {
+            "name": "Bladselleri",
+            "amount": 1,
+            "unit": "dl"
+        },
+        {
+            "name": "Risnudlar",
+            "amount": 250,
+            "unit": "gram"
         }
     ]
 }
@@ -77,7 +92,7 @@ GET {{baseUrl}}/recipes/632d9fcb6e7766b37d9837f5 HTTP/1.1
 ###
 
 # Tar bort ett recept
-DELETE {{baseUrl}}/recipes/6526a45c99612c970cb6f81c HTTP/1.1
+DELETE {{baseUrl}}/recipes/6513d48599612c970cb37a8e HTTP/1.1
 
 ###
 

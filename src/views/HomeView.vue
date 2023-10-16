@@ -2,6 +2,9 @@
     <div>
         <WelcomeText :text="homeText" />
     </div>
+    <nav>
+    <Navbar />
+  </nav>
     <main>
         <RecipeCardList :category=selectedCategory />
     </main>
@@ -10,11 +13,13 @@
 <script>
 import RecipeCardList from '../components/RecipeCardList.vue';
 import WelcomeText from '../components/WelcomeText.vue';
+import Navbar from '../components/Navbar.vue';
 
 export default {
     components: {
         WelcomeText,
-        RecipeCardList
+        RecipeCardList,
+        Navbar
     },
     data() {
         return {
