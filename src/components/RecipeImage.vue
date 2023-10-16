@@ -1,19 +1,19 @@
 <template>
     <div>
-<img :src="recipe.imageUrl" alt="Receptbild">
+        <img :src="recipe.imageUrl" alt="Receptbild">
     </div>
 </template>
 
 <script>
-    export default {
-       props:{
-        recipe: Object,
-       }
+export default {
+    props: {
+        recipe: Object
     }
+}
 </script>
 
 <style scoped>
-img{
+img {
     width: 150px;
     height: auto;
 }

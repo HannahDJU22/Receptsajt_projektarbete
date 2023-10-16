@@ -1,6 +1,6 @@
 <template>
     <div>
-<WelcomeText :text="homeText" />
+        <WelcomeText :text="homeText" />
     </div>
     <main>
         <RecipeCardList :category=selectedCategory />
@@ -14,21 +14,21 @@ import WelcomeText from '../components/WelcomeText.vue';
 export default {
     components: {
         WelcomeText,
-        RecipeCardList,
+        RecipeCardList
     },
     data() {
         return {
             selectedCategory: this.$route.params.categoryId,
-            homeText: "Här kan du ta del av Davids magiska och veganska recept! ENJOY!",
-        }
+            homeText: "Här kan du ta del av Davids magiska och veganska recept! ENJOY!"
+        };
     },
     created() {
-        this.$watch (
+        this.$watch(
             () => this.$route.params,
             (toParams) => {
-                this.selectedCategory = toParams.categoryId
+                this.selectedCategory = toParams.categoryId;
             }
-        )
-    },
+        );
+    }
 }
 </script>

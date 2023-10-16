@@ -2,9 +2,9 @@
     <div>
         <ul>
             <li v-for="(ingredient, index) in ingredients" :key="index">
-                {{ ingredient.amount
-            }} {{ ingredient.unit }}
-            {{ ingredient.name }}
+                {{ ingredient.amount }}
+                {{ ingredient.unit }}
+                {{ ingredient.name }}
             </li>
         </ul>
     </div>
@@ -13,11 +13,7 @@
 <script>
 export default {
     props: {
-        ingredients: Array,
-    },
-    data(){
-        return{
-        }
+        ingredients: Array
     }
 }
 </script>

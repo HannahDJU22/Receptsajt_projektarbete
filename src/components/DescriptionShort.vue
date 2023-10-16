@@ -1,17 +1,15 @@
 <template>
     <div>
-{{ recipe.description }}
+        {{ recipe.description }}
     </div>
 </template>
 
 <script>
-    export default {
-        props:{
-            recipe: Object,
-        }
+export default {
+    props: {
+        recipe: Object
     }
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

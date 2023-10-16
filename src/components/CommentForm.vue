@@ -30,7 +30,6 @@
 </template>
 
 <script>
-
 export default {
     data() {
         return {
@@ -102,18 +101,20 @@ export default {
 #form-block {
     display: block;
 }
-fieldset{
+
+fieldset {
     border-color: rgb(145, 66, 9);
 }
-input,textarea{
+
+input,
+textarea {
     background-color: rgb(248, 242, 183);
     border-color: rgb(247, 238, 160);
     border-style: none;
 }
-button{
+
+button {
     background-color: rgb(248, 196, 24);
     border-radius: 8px;
 }
-
-
 </style>

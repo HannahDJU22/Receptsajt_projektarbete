@@ -1,11 +1,11 @@
 <template>
     <div>
         <p>
-            <SearchRecipe @search-field-update="fetchRecipes"/>
+            <SearchRecipe @search-field-update="fetchRecipes" />
         </p>
         <div v-for="recipe in recipeData" :key="recipe._id" class="recipe-block">
-            <RouterLink :to="{ name: 'recipe', params: { recipeId: recipe._id }}">
-                <RecipeCard :recipe="recipe"/>
+            <RouterLink :to="{ name: 'recipe', params: { recipeId: recipe._id } }">
+                <RecipeCard :recipe="recipe" />
             </RouterLink>
         </div>
     </div>
@@ -22,7 +22,7 @@ export default {
     },
     data() {
         return {
-            recipeData: [],
+            recipeData: []
         };
     },
     created() {
@@ -48,15 +48,15 @@ export default {
     components: {
         RecipeCard,
         RouterLink,
-        SearchRecipe,
+        SearchRecipe
     }
 }
 </script>
 
 <style scoped>
 .recipe-block {
-    background-color: rgb(240,230,140);
-    border: 3px solid rgb(218,165,32);
+    background-color: rgb(240, 230, 140);
+    border: 3px solid rgb(218, 165, 32);
     border-radius: 7px;
     padding: 5px;
     margin: 5px;
