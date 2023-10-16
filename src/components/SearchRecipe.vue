@@ -2,23 +2,26 @@
     <div>
         <input type="search" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)"
             placeholder="Sök recept">
+        <FontAwesomeIcon id="search-icon" :icon="['fas', 'magnifying-glass']" />
     </div>
 </template>
 
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 export default {
     data() {
         return {
             searchRecipe: ''
         };
-    }
+    },
+    components: { FontAwesomeIcon }
 }
 </script>
 
 <style scoped>
 div {
-    padding: 5px;
-    margin: 5px;
+    margin: 8px;
 }
 
 input {
@@ -28,5 +31,10 @@ input {
     border-radius: 7px;
     border-color: rgb(247, 238, 160);
     border-style: none;
+}
+
+#search-icon {
+    height: 20px;
+    padding-left: 5px;
 }
 </style>
