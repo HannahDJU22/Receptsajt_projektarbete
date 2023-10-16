@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="search-box">
         <input type="search" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)"
             placeholder="Sök recept">
         <FontAwesomeIcon id="search-icon" :icon="['fas', 'magnifying-glass']" />
@@ -26,7 +26,7 @@ div {
 
 input {
     background-color: rgb(247, 238, 160);
-    width: 35%;
+    width: 50%;
     height: 30px;
     border-radius: 7px;
     border-color: rgb(247, 238, 160);
