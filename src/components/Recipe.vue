@@ -16,14 +16,17 @@
                     <Instructions :recipe="recipe" />
                 </div>
             </div>
+            <div class="rating">
+                <RatingSection :recipe-id="recipeId"></RatingSection>
+            </div>
             <div class="comment">
                 <CommentSection :recipe-id="recipeId" />
             </div>
-            <div class="rating">
-                <UserRating />
-            </div>
+            
         </div>
     </div>
+
+    
 </template>
   
 <script>
@@ -32,6 +35,7 @@ import CommentSection from './CommentSection.vue';
 import Ingredients from './Ingredients.vue';
 import Instructions from './Instructions.vue';
 import UserRating from './UserRating.vue';
+import RatingSection from './RatingSection.vue';
 
 export default {
     data() {
@@ -77,7 +81,8 @@ export default {
         CommentSection,
         Ingredients,
         Instructions,
-        UserRating
+        UserRating,
+        RatingSection
     }
 };
 </script>
