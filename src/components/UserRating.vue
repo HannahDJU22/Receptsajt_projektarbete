@@ -1,14 +1,15 @@
 <template>
     <div>
-<p>{{ msg }}</p>
+        <p>Genomsnittligt omdöme:</p>
+        <font-awesome-icon v-for="index in userRating" :key="index" :icon="['fas', 'star']" />
     </div>
 </template>
 
 <script>
     export default {
-        data(){return{
-            msg: 'Betyg: *****'
-        }}
+        props:{
+            userRating: Number,
+        }
     }
 </script>
 
