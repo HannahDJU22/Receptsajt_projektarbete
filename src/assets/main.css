@@ -23,12 +23,14 @@ a{
   color: rgb(37, 27, 1);
   transition: 0.4s;
 }
+
 ::placeholder {
   font-family: 'Courier New', Courier, monospace;
   font-style: italic;
   color: rgb(66, 65, 65);
   font-size: 15px;
 }
+
 header {
   text-align: center;
 }
@@ -48,6 +50,7 @@ footer{
 #welcome-text{
   display: block;
 }
+
 #search-box{
   text-align: left;
 }
@@ -58,18 +61,26 @@ footer{
   list-style-type: none;
   padding: 0;
 }
+
 #category-list li{
   margin-right: 10px;
 }
+
 #category-header{
   text-align: left;
 }
 
-
 .rating{
-  font-size: 15px;
+  font-size: 10px;
 }
 
+.ingredients{
+  text-align: left;
+}
+
+.instructions{
+  text-align: left;
+}
 
 /*small 600 and up*/
 @media (min-width: 600px) {

@@ -4,7 +4,7 @@
       <MainHeader />
     </h1>
   </header>
-  <nav id="nav">
+  <nav>
     <Navbar />
   </nav>
   <main>

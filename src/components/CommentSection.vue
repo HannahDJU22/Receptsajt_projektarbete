@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Kommentarer</h2>
-        <CommentForm :recipe-id="recipeId" /><br>
+        <CommentForm :recipe-id="recipeId" />
         <CommentList :recipe-id="recipeId" />
     </div>
 </template>
@@ -21,4 +21,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+h2{
+    font-size: 20px;
+}
+</style>

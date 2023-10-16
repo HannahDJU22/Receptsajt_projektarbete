@@ -44,7 +44,7 @@ export default {
 <style scoped>
 ul {
     padding-inline-start: 0;
-    width: 50%;
+    width: 75%;
 }
 
 li {
@@ -69,6 +69,7 @@ li {
 
 .comment-list-comment {
     font-size: smaller;
+    text-align: left;
 }
 
 .comment-list-date {
