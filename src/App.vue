@@ -38,13 +38,9 @@ export default {
 
 
 <style scoped>
-
-
 h1 {
   font-size: 35px;
   color: rgb(58, 43, 3);
   font-weight: bolder;
 }
-
-
 </style>
