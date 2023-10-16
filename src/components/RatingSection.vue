@@ -43,7 +43,6 @@ export default {
             this.ratingSubmitted = true;
         }
     }
-
 }
 </script>
 

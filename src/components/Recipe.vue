@@ -91,7 +91,6 @@ export default {
 #top-div {
     padding: 5px;
 }
-
 .card {
     padding: 5px;
     margin-bottom: 5px;
@@ -99,7 +98,6 @@ export default {
     border: 3px solid rgb(218, 165, 32);
     border-radius: 5px;
 }
-
 .comment {
     padding: 5px;
     margin-bottom: 5px;
@@ -107,13 +105,11 @@ export default {
     border: 3px solid rgb(218, 165, 32);
     border-radius: 5px;
 }
-
 .how-to-with-what {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .ingredients {
     flex: 1;
     margin-bottom: 5px;
@@ -122,7 +118,6 @@ export default {
     border-radius: 5px;
     padding: 5px;
 }
-
 .instructions {
     flex: 1;
     padding: 5px;
@@ -131,7 +126,6 @@ export default {
     border: 3px solid rgb(218, 165, 32);
     border-radius: 5px;
 }
-
 .rating {
     margin-bottom: 5px;
     background-color: rgb(240, 230, 140);
@@ -139,4 +133,3 @@ export default {
     border-radius: 5px;
 }
 </style>
-  

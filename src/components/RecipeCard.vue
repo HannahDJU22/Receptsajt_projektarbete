@@ -37,7 +37,6 @@ export default {
     grid-gap: 10px;
     grid-template-rows: repeat(3, auto);
 }
-
 .item-title {
     grid-row: 1;
     grid-column: 1;
@@ -46,28 +45,23 @@ export default {
     font-size: large;
     font-weight: bold;
 }
-
 .item-rating {
     grid-row: 1;
     grid-column: 2;
 }
-
 .item-desc {
     grid-row: 2;
     grid-column: 1;
 }
-
 .item-img {
     grid-row: 2;
     grid-column: 2;
 }
-
 .item-ingred-count {
     grid-row: 3;
     grid-column: 1;
     font-style: italic;
 }
-
 .item-time {
     grid-row: 3;
     grid-column: 2;

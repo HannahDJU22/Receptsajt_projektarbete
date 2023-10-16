@@ -31,25 +31,9 @@ export default {
 </script>
 
 <style scoped>
-header {
-  grid-row: 1;
-}
-
-header,
-footer {
-  grid-column: 1/3;
-  text-align: center;
-}
-
 h1 {
   font-size: 35px;
   color: rgb(58, 43, 3);
   font-weight: bolder;
-}
-
-main {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  text-shadow: none;
 }
 </style>
