@@ -14,7 +14,8 @@ export default {
 
 <style scoped>
 img {
-    width: 150px;
+    width: 100%;
     height: auto;
+    border-radius: 30px;
 }
 </style>
