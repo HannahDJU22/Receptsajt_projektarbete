@@ -63,14 +63,24 @@ export default {
                     comment: this.commentBody,
                 })
             })
-                .then((response) => response.json())
-                .then((json) => console.log(json));
-
-            this.formSubmitted = true;
-
-            setTimeout(() => {
-                this.showConfirmation = true;
-            }, 2000);
+                .then((response) => {
+                    if(response.ok){
+                        return response.json();
+                    
+                    }else{
+                        throw new Error('FEL');
+                       
+                    }
+                })
+                .then(()=>{
+                    this.formSubmitted=true;
+                    this.showConfirmation=true;
+                })
+           
+                .catch(()=>{
+                    this.isError=true;
+                    this.errorMsg='Något gick fel, din kommentar kunde inte skickas'
+                })
         }
     }
 }
