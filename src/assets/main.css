@@ -1,35 +1,146 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
 
   font-weight: normal;
+  background-color: rgb(212, 175, 55);
+  color: rgb(37, 27, 1);
 }
 
-a,
-.green {
+.bolded {
+  font-weight: bold;
+}
+
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(37, 27, 1);
   transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  color: rgb(66, 65, 65);
+  font-size: 15px;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+footer {
+  text-align: right;
+}
+
+#welcome-text {
+  display: block;
+}
+
+#search-box {
+  text-align: left;
+}
+
+#category-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+#category-list li {
+  margin-right: 10px;
+}
+
+#category-header {
+  text-align: left;
+}
+
+.rating {
+  font-size: 10px;
+}
+
+.ingredients {
+  text-align: left;
+}
+
+.instructions {
+  text-align: left;
+}
+
+/*small 600 and up*/
+@media (min-width: 600px) {
+  #welcome-text {
+    font-size: 19px;
+  }
+
+  #search-input {
+    width: 80%;
+  }
+
+  .rating {
+    font-size: 12px;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+/* medium 768 and up*/
+@media (min-width: 768px) {
+  #header,
+  #footer {
+    grid-column: 1/3;
   }
 
-  #app {
+  #app-main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    grid-template-columns: 1fr 5fr;
+  }
+
+  #home-welcome {
+    grid-column: 1/3;
+  }
+
+  #main {
+    grid-column: 2/3;
+  }
+
+  #nav {
+    grid-column: 1/2;
+    text-align: left;
+  }
+
+  #category-list {
+    display: grid;
+    justify-content: left;
   }
 }
+
+/*large 992 and up*/
+@media (min-width: 992px) {
+  #app {
+    max-width: 1280px;
+    font-size: 20px;
+  }
+
+  #welcome-text {
+    font-size: 24px;
+  }
+
+}
+
+/*x-large 1200 and up*/
+@media (min-width: 1200px) {}
