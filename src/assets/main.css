@@ -100,10 +100,6 @@ footer {
 
 /* medium 768 and up*/
 @media (min-width: 768px) {
-  #app {
-    grid-template-columns: 1fr, 5fr;
-  }
-
   #header,
   #footer {
     grid-column: 1/3;
@@ -111,6 +107,7 @@ footer {
 
   #app-main {
     display: grid;
+    grid-template-columns: 1fr 5fr;
   }
 
   #home-welcome {
