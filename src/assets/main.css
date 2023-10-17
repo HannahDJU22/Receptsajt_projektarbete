@@ -85,33 +85,48 @@ footer{
 /*small 600 and up*/
 @media (min-width: 600px) {
   #welcome-text{
-    font-size: 15px;
+    font-size: 19px;
   }
   #search-input{
-    width: 65%;
+    width: 80%;
   }
   .rating{
     font-size: 12px;
   }
 }
+
 /* medium 768 and up*/
 @media (min-width: 768px){
 #app{
   grid-template-columns: 1fr, 5fr;
 }
-header, footer{
+#header, #footer{
   grid-column: 1/3;
 }
-main{
+#app-main{
+  display: grid;
+}
+#home-welcome{
+  grid-column: 1/3;
+}
+#main{
   grid-column: 2/3;
 }
-nav{
+#nav{
   grid-column: 1/2;
+  text-align: left;
+}
+#category-list{
+  display: grid;
+  justify-content: left;
 }
 }
 
 /*large 992 and up*/
 @media (min-width: 992px){
+  #app{
+    max-width: 1280px;
+  }
 
 }
 /*x-large 1200 and up*/
