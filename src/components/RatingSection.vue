@@ -5,7 +5,7 @@
             <font-awesome-icon v-if="!ratingSubmitted" v-for="starItem in starsTotal" @click="submitRating(starItem)"
             :icon="['fas', 'star']" class="star-icon"/>
         
-        <p v-else>Tack för ditt betyg!</p>
+        <p v-else>Tack för ditt betyg: {{starNumber}}!</p>
     </div>
 </template>
 
@@ -14,7 +14,8 @@ export default {
     data() {
         return {
             starsTotal: 5,
-            ratingSubmitted: false
+            ratingSubmitted: false,
+            starNumber:0
         };
     },
     props: {
@@ -23,7 +24,7 @@ export default {
     methods: {
         submitRating(starNumber) {
 
-            alert(starNumber);
+            this.starNumber=starNumber;
             let starsToPostObj = {
                 rating: starNumber
             };
