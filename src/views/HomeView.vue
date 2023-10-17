@@ -28,6 +28,7 @@ export default {
         };
     },
     created() {
+        document.getElementById('app-main').style.display = null;
         this.$watch(
             () => this.$route.params,
             (toParams) => {

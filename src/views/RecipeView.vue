@@ -24,6 +24,9 @@ export default {
             recipeIdToDisplay: this.$route.params.recipeId,
             recipeText: "Vad roligt att du är intresserad av just detta recept. Lämna gärna en kommentar och ett betyg när du är klar!"
         };
+    },
+    created() {
+        document.getElementById('app-main').style.display = 'block';
     }
 }
 </script>
