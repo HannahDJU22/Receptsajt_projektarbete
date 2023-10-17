@@ -2,8 +2,9 @@
     <div>
         <h2>Vad tyckte du om receptet? Klicka på en stjärna för att ge ditt omdöme!</h2>
 
-        <font-awesome-icon v-if="!ratingSubmitted" v-for="starItem in starsTotal" @click="submitRating(starItem)"
-            :icon="['fas', 'star']" />
+            <font-awesome-icon v-if="!ratingSubmitted" v-for="starItem in starsTotal" @click="submitRating(starItem)"
+            :icon="['fas', 'star']" class="star-icon"/>
+        
         <p v-else>Tack för ditt betyg!</p>
     </div>
 </template>
@@ -46,4 +47,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.star-icon:hover{
+    transform: scale(1.8);
+    color: rgb(250, 214, 8);
+}
+
+</style>
