@@ -1,13 +1,13 @@
 <template>
-  <header>
+  <header id="header">
     <h1>
       <MainHeader />
     </h1>
   </header>
-  <main>
+  <main id="app-main">
     <RouterView />
   </main>
-  <footer>
+  <footer id="footer">
     <MainFooter />
   </footer>
 </template>

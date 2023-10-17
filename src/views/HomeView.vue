@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div id="home-welcome">
         <WelcomeText :text="homeText" />
     </div>
-    <nav>
+    <nav id="nav">
     <Navbar />
   </nav>
-    <main>
+    <main id="main">
         <RecipeCardList :category=selectedCategory />
     </main>
 </template>

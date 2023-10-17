@@ -1,6 +1,6 @@
 <template>
     <div id="search-box">
-        <input type="search" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)"
+        <input id="search-input" type="search" v-model="searchRecipe" @input="$emit('searchFieldUpdate', this.searchRecipe)"
             placeholder="Sök recept">
         <FontAwesomeIcon id="search-icon" :icon="['fas', 'magnifying-glass']" />
     </div>
